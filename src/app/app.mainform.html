@@ -1,0 +1,137 @@
+<div class="form">
+	<form action="nosubmit" id="frm">
+  <h2>{{formTitle}}</h2>
+<span class="editing" id="-1"></span>
+     <div class="enclosure">
+	     <div class="field">
+		 <label for="employeeFname">
+		{{formInputLabelFName}}
+	     </label>
+	     <input
+			class="employeeInput"
+			name="employeeFname"
+			id="employeeFname"
+			type="text"
+			required="required"
+			maxlength="20"
+			pattern="[А-яа-я]+"
+			/>
+	  </div>
+	<div class="field">
+	  <label for="employeeLname">
+	  {{formInputLabelLName }}
+	</label>
+	<input
+		  class="employeeInput"
+		  name="employeeLname"
+		  id="employeeLname"
+		  type="text"
+		  required="required"
+		  maxlength="20"
+		  pattern="[А-яа-я]+"
+		  />
+    </div>
+ </div>
+ <div class="enclosure">
+ <div class="field">
+  <label for="employeeMname">
+  {{formInputLabelMName}}
+ </label>
+ <input
+ class="employeeInput"
+ name="employeeMname"
+	  id="employeeMname"
+	  type="text"
+	  required="required"
+	  maxlength="20"
+	  pattern="[А-яа-я]+"
+	  />
+</div>
+<div class="field">
+<label for="employeeBday">
+{{formInputLabelBDay}}
+</label>
+<input
+class="employeeInput"
+name="employeeBday"
+     id="employeeBday"
+     type="date"
+     required="required"
+     />
+</div>
+</div>
+<div class="enclosure">
+<div class="field">
+<label for="employeePhone">
+{{formInputLabelPhone}}
+</label>
+<input
+class="employeeInput"
+placeholder="375291234567"
+    name="employeePhone"
+    id="employeePhone"
+    type="text"
+    required="required"
+    pattern="[0-9]{12}+"/>
+</div>
+<div class="field">
+<label for="employeeMail">
+{{formInputLabelEmail}}
+</label>
+<input
+class="employeeInput"
+name="employeeMail"
+	  placeholder="email@domain.ext"
+	 id="employeeMail"
+	 type="email"
+	 required="required"
+	 pattern="\S+@\S+"/>
+</div>
+</div>
+<div class="enclosure single">
+<div class="field">
+<label for="employeeResidence">
+{{formInputLabelResidence}}
+</label>
+<input
+class="employeeInput"
+name="employeeResidence"
+  id="employeeResidence"
+  type="text"
+  required="required"
+  maxlength="200"
+  pattern="[А-яа-яA-za-z0-9.,\s]+"
+  />
+</div>
+</div>
+<div class="enclosure">
+ <div class="field">
+<label for="employeePosition">
+{{formInputLabelPosition }}
+</label>
+<input
+class="employeeInput"
+name="employeePosition"
+	  id="employeePosition"
+	  type="text" required="required"
+	  maxlength="20"
+	  pattern="[А-яа-яA-za-z\s]+"
+	  />
+</div>
+    <div class="field">
+	<label for="emailInput">{{formInputLabelSalary}}</label>
+	<input
+	class="employeeInput"
+	name="employeeSalary"
+		  id="employeeSalary"
+		  type="number"
+		  required="required"
+		  min="10"/>
+    </div>
+</div>
+    <div class="field submit">
+	     <button id="addButton" onclick="addEmployee()">{{formBtnTextAdd}}</button>
+	     <button onclick="resetForm()">{{formBtnTextClear}}</button>
+   </div>
+</form>
+</div>

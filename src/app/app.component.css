@@ -1,0 +1,80 @@
+* {
+  font-family: Arial;
+}
+div {
+  margin: 0 auto;
+  width: 50%;
+}
+div.form {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+div.form.employees {
+  width: 75%;
+}
+div.form.employees table {
+  margin: auto;
+}
+div.form h2 {
+  text-align: center;
+}
+div.field {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 100%;
+}
+div.field label {
+  color: #848484;
+  font-size: .8em;
+  clear: both;
+  display: block;
+  padding-right: 5px;
+}
+div.field input {
+  border-radius: 5px;
+  background-color: #F1FAFC;
+  width: 100%;
+  height: 26px;
+  clear: both;
+  border: 1px solid #ccc;
+}
+div.field.submit {
+  text-align: center;
+  margin: 20px 0;
+}
+div.enclosure {
+  display: flex;
+}
+input {
+  height: 15px;
+  font-size: 1em;
+}
+table,
+th,
+td {
+  border: 1px solid #000;
+}
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+table {
+  border-spacing: 0;
+  *border-collapse: collapse;
+  margin: 10px;
+}
+table caption {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+table td:last-child {
+  text-align: center;
+}
+.editing {
+  display: none;
+}
