@@ -1,9 +1,9 @@
 import{Component} from '@angular/core';
 
 @Component({
-	selector: 'maintable';
-	templateUrl: './app.maintable.html';
-	styleUrl: './app.component.css';
+	selector: 'maintable',
+	templateUrl: './app.maintable.html',
+	styleUrl: './app.component.css',
 })
 export class AppMainTable{
 	tableCaption = 'Сотрудники';
