@@ -1,7 +1,6 @@
 <div class="form">
-	<form action="nosubmit" id="frm">
+	<form action="nosubmit" #frm="ngForm" ngNativeValidate>
   <h2>{{formTitle}}</h2>
-<span class="editing" id="-1"></span>
      <div class="enclosure">
 	     <div class="field">
 		 <label for="employeeFname">
@@ -9,7 +8,8 @@
 	     </label>
 	     <input
 			class="employeeInput"
-			name="employeeFname"
+			[(ngModel)]="emp.f_name"
+			name="f_name"
 			id="employeeFname"
 			type="text"
 			required="required"
@@ -23,6 +23,7 @@
 	</label>
 	<input
 		  class="employeeInput"
+		  [(ngModel)]="emp.l_name"
 		  name="employeeLname"
 		  id="employeeLname"
 		  type="text"
@@ -39,6 +40,7 @@
  </label>
  <input
  class="employeeInput"
+[(ngModel)]="emp.m_name"
  name="employeeMname"
 	  id="employeeMname"
 	  type="text"
@@ -53,6 +55,7 @@
 </label>
 <input
 class="employeeInput"
+[(ngModel)]="emp.bDay"
 name="employeeBday"
      id="employeeBday"
      type="date"
@@ -68,6 +71,7 @@ name="employeeBday"
 <input
 class="employeeInput"
 placeholder="375291234567"
+[(ngModel)]="emp.phone"
     name="employeePhone"
     id="employeePhone"
     type="text"
@@ -81,6 +85,7 @@ placeholder="375291234567"
 <input
 class="employeeInput"
 name="employeeMail"
+[(ngModel)]="emp.email"
 	  placeholder="email@domain.ext"
 	 id="employeeMail"
 	 type="email"
@@ -95,6 +100,7 @@ name="employeeMail"
 </label>
 <input
 class="employeeInput"
+[(ngModel)]="emp.residence"
 name="employeeResidence"
   id="employeeResidence"
   type="text"
@@ -111,6 +117,7 @@ name="employeeResidence"
 </label>
 <input
 class="employeeInput"
+[(ngModel)]="emp.position"
 name="employeePosition"
 	  id="employeePosition"
 	  type="text" required="required"
@@ -122,6 +129,7 @@ name="employeePosition"
 	<label for="emailInput">{{formInputLabelSalary}}</label>
 	<input
 	class="employeeInput"
+	[(ngModel)]="emp.salary"
 	name="employeeSalary"
 		  id="employeeSalary"
 		  type="number"
@@ -130,8 +138,8 @@ name="employeePosition"
     </div>
 </div>
     <div class="field submit">
-	     <button id="addButton" onclick="addEmployee()">{{formBtnTextAdd}}</button>
-	     <button onclick="resetForm()">{{formBtnTextClear}}</button>
+	     <button id="addButton" (click)="addNewEmployee()">{{formBtnTextAdd}}</button>
+	     <button (click)="resetForm()">{{formBtnTextClear}}</button>
    </div>
 </form>
 </div>

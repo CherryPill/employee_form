@@ -12,6 +12,18 @@
 			<th>{{tableHeaderSalary}}</th>
 			<th>{{tableHeaderActions}}</th>
 		</tr>
+		<tr *ngFor="let item of employeeArr; let i = index">
+			<td>{{item.id}}</td>
+			<td>{{item.f_name}} {{item.l_name}} {{item.m_name}}</td>
+			<td>{{item.bDay}}</td>
+			<td>{{item.phone}}</td>
+			<td>{{item.email}}</td>
+			<td>{{item.residence}}</td>
+			<td>{{item.position}}</td>
+			<td>{{item.salary}}</td>
+			<td><button type="button" name="button" (click)="deleteRow(i)">Удалить</button>
+			<button type="button" name="button" (click)="editRow(i)">Редактировать</button></td>
+		</tr>
 	</thead>
 	<tbody>
 	</tbody>

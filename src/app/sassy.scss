@@ -1,0 +1,88 @@
+$field-background-color: #F1FAFC;
+$std-border: #ccc;
+$table-border: #000;
+$std-label-color: #848484;
+$border-radius-px: 10px;
+$main-emp-width: 75%;
+$std-div-width: 50%;
+$std-field-width: 100%;
+$font-for-all: Arial;
+*{
+  font-family: $font-for-all;
+}
+div{
+	&.form {
+		border: 1px solid $std-border;
+	      border-radius: $border-radius-px;
+	      margin-top: 15px;
+	      padding-bottom: 10px;
+		&.employees{
+		      width: $main-emp-width;
+			table{
+				margin: auto;
+			}
+		}
+		h2{
+		  text-align: center;
+		}
+	}
+	&.field{
+	   text-align: left;
+	    margin-top: 5px;
+	    margin-left: 10px;
+	    width: $std-field-width;
+	    label {
+	      color: $std-label-color;
+	      font-size: .8em;
+	      clear:both;
+	      display: block;
+	      padding-right: 5px;
+	    }
+	    input{
+	      border-radius: 5px;
+	      background-color: $field-background-color;
+	      width: 100%;
+	      height: 26px;
+	      clear: both;
+	      border: 1px solid #ccc;
+	    }
+	}
+	&.field {
+	 	&.submit{
+		     text-align:center;
+		     margin: 20px 0;
+		}
+	}
+	margin: 0 auto;
+      width: 50%;
+	&.enclosure{
+	     display: flex;
+	}
+}
+input {
+	height: 15px;
+	font-size: 1em;
+
+}
+table, th, td, {
+     border: 1px solid $table-border;
+}
+th, td {
+     padding: 5px;
+     text-align: center;
+}
+table{
+      border-spacing: 0; *border-collapse: collapse;
+     margin: 10px;
+     caption{
+          font-size: 1.5em;
+          margin-bottom: 5px;
+          font-weight: bold;
+     }
+     td:last-child {
+           text-align: center;
+     }
+}
+.editing{
+  display: none;
+}
